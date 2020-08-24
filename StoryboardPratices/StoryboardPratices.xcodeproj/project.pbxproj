@@ -22,6 +22,7 @@
 		6EB3988D24F45D9400EDA974 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3988C24F45D9400EDA974 /* RegisterViewController.swift */; };
 		6EB3988F24F45DB900EDA974 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3988E24F45DB900EDA974 /* DiscoverViewController.swift */; };
 		6EB3989124F45DD200EDA974 /* PhotoOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3989024F45DD200EDA974 /* PhotoOpenViewController.swift */; };
+		6ED79D5D24F46E6700614C48 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED79D5C24F46E6700614C48 /* DesignableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		6EB3988C24F45D9400EDA974 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6EB3988E24F45DB900EDA974 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		6EB3989024F45DD200EDA974 /* PhotoOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoOpenViewController.swift; sourceTree = "<group>"; };
+		6ED79D5C24F46E6700614C48 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		6EAB889C24F0466A005C8E32 /* StoryboardPratices */ = {
 			isa = PBXGroup;
 			children = (
+				6ED79D5B24F46E4500614C48 /* Extensions */,
 				6EB3988124F45A5900EDA974 /* Resources */,
 				6EA2622B24F2B6E2001202C2 /* Protocols */,
 				6EA2622624F2AE59001202C2 /* ViewControllers */,
@@ -172,6 +175,14 @@
 				6EB3989024F45DD200EDA974 /* PhotoOpenViewController.swift */,
 			);
 			path = PhotoOpen;
+			sourceTree = "<group>";
+		};
+		6ED79D5B24F46E4500614C48 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6ED79D5C24F46E6700614C48 /* DesignableView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +265,7 @@
 				6EAB889E24F0466A005C8E32 /* AppDelegate.swift in Sources */,
 				6EA2622D24F2B712001202C2 /* MainProtocol.swift in Sources */,
 				6EA2622A24F2AEC0001202C2 /* SetDataViewController.swift in Sources */,
+				6ED79D5D24F46E6700614C48 /* DesignableView.swift in Sources */,
 				6EA2622824F2AE97001202C2 /* MessageViewController.swift in Sources */,
 				6EAB88A024F0466A005C8E32 /* SceneDelegate.swift in Sources */,
 				6EB3988F24F45DB900EDA974 /* DiscoverViewController.swift in Sources */,
