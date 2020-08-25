@@ -10,21 +10,35 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    weak var delegate: LoggedOutViewController?
+
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPwd: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let email = txtEmail.text, email != "" else {
+            print("Email is empty")
+            return
+        }
+
+        guard let pwd = txtPwd.text, pwd != "" else {
+            print("Password is empty")
+            return
+        }
+
+        if segue.identifier == "returnedSegue" {
+            let data: EmailData
+            data.email = email
+            data.password = pwd 
+
+            delegate?.handleData(emailData: data)
+        }
     }
-    */
 
 }
