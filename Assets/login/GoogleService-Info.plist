@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>855697659626-n517kunn4hqhl277i5vk7p702iboku9k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.855697659626-n517kunn4hqhl277i5vk7p702iboku9k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCtSWiZYovrKx0RXG2pjPVql-3yOPz7vx8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>855697659626</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.guimagames.photo</string>
+	<key>PROJECT_ID</key>
+	<string>logindemo-d1a1a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>logindemo-d1a1a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:855697659626:ios:36f7551f61419ba82a6993</string>
+	<key>DATABASE_URL</key>
+	<string>https://logindemo-d1a1a.firebaseio.com</string>
+</dict>
+</plist>
