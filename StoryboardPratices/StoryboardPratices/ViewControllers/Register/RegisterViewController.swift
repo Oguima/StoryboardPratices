@@ -33,10 +33,8 @@ class RegisterViewController: UIViewController {
         }
 
         if segue.identifier == "returnedSegue" {
-            let data: EmailData
-            data.email = email
-            data.password = pwd 
-
+            let data: EmailData = EmailData(email: email, password: pwd)
+            
             delegate?.handleData(emailData: data)
         }
     }

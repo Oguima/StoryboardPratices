@@ -13,7 +13,7 @@ struct EmailData {
     let password: String 
 }
 
-class LoggedOutViewController: UIViewController {
+class LoggedOutViewController: UIViewController, EmailProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,10 @@ class LoggedOutViewController: UIViewController {
     @IBAction func returned(_ seg: UIStoryboardSegue)
     {
         print("Returned")
+    }
+    
+    func handleData(emailData: EmailData) {
+        print ("Email:\(emailData.email) pwd: \(emailData.password)")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

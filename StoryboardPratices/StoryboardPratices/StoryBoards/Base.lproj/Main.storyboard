@@ -98,19 +98,19 @@
             <objects>
                 <viewController storyboardIdentifier="RegisterViewController" title="Register" id="H4Q-Cd-jou" customClass="RegisterViewController" customModule="StoryboardPratices" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAw-z8-RvP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RG-It-r2k">
-                                <rect key="frame" x="10.000000000000004" y="60.000000000000007" width="63.333333333333343" height="20.333333333333336"/>
+                                <rect key="frame" x="10.000000000000004" y="104" width="63.333333333333343" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="erl-sR-0eD">
-                                <rect key="frame" x="10" y="110.33333333333331" width="394" height="186"/>
+                                <rect key="frame" x="10" y="154.33333333333334" width="394" height="186.00000000000003"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNl-5d-54m">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNl-5d-54m">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="Reb-rX-lX1"/>
@@ -126,8 +126,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xso-rR-M11">
-                                        <rect key="frame" x="0.0" y="67.000000000000014" width="394" height="52"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xso-rR-M11">
+                                        <rect key="frame" x="0.0" y="67" width="394" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="LTj-Mz-kdF"/>
                                         </constraints>
@@ -143,7 +143,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59g-RK-ufW" customClass="DesignableButton" customModule="StoryboardPratices" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="134" width="394" height="52"/>
+                                        <rect key="frame" x="0.0" y="133.99999999999997" width="394" height="52"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="vR4-D0-8Pk"/>
@@ -163,7 +163,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="HWV-vH-gU7" kind="unwind" unwindAction="returned:" id="J4p-lf-bEF"/>
+                                            <segue destination="HWV-vH-gU7" kind="unwind" identifier="returnedSegue" unwindAction="returned:" id="J4p-lf-bEF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -181,6 +181,10 @@
                         <viewLayoutGuide key="safeArea" id="FZ8-wX-BJR"/>
                     </view>
                     <navigationItem key="navigationItem" id="cOV-k5-053"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="BNl-5d-54m" id="Gik-KM-SUo"/>
+                        <outlet property="txtPwd" destination="xso-rR-M11" id="JbX-ZE-6DM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmw-Qb-dwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="HWV-vH-gU7" userLabel="Exit" sceneMemberID="exit"/>
