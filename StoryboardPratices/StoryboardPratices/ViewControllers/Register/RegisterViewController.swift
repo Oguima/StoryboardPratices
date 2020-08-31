@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-import Firebase
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
 
@@ -56,6 +56,15 @@ class RegisterViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
+    func transitionToHome(){
+        //Change root view controller... (DiscoverViewController)
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? DiscoverViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
+    
     @IBAction func nextTaped(_ sender: UIButton) {
         let error = validateFields()
         
@@ -64,8 +73,15 @@ class RegisterViewController: UIViewController {
         }
         else
         {
+            //Creat cleaned versions of the data
+            let firstName =  firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let email = txtEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = txtPwd.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
             //Register user
-            Auth.auth().createUser(withEmail: txtEmail.text!, password: txtPwd.text!) { authResult, error in
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
               //Check errors
                 if error != nil {
                     self.showError("Erro ao criar usuário")
@@ -73,14 +89,28 @@ class RegisterViewController: UIViewController {
                 else
                 {
                     //Usuário criado com sucesso. (Pods Firebase/Core . Firebase/Firestore
-                    //let db = Firestore.firestore()
+                    let db = Firestore.firestore()
                     
+                    db.collection("users").addDocument(data: ["firstname": firstName,
+                        "lastname": lastName,
+                        "uid": authResult!.user.uid]) { (error) in
+                        
+                            if error != nil {
+                                //show error
+                                self.showError("Erro ao salvar dados do usuário.")
+                            }
+                    }
+                    
+                    //Transiction Discover
+                    self.transitionToHome()
                 }
                 
             }
             
-            //Transiction Discover
+            
         }
 
     }
+    
+    
 }

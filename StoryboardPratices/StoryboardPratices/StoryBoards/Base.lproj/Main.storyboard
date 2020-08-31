@@ -69,7 +69,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="VMH-Xe-iTM">
-                                <rect key="frame" x="155.66666666666666" y="354.33333333333331" width="102.99999999999997" height="27.666666666666686"/>
+                                <rect key="frame" x="155.66666666666666" y="354.33333333333331" width="102.99999999999997" height="27.333333333333314"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -202,7 +202,7 @@
                                             <segue destination="dj1-3T-F5A" kind="show" identifier="discover" id="GaM-wE-9j0"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7X-Xt-v9E">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7X-Xt-v9E">
                                         <rect key="frame" x="0.0" y="335" width="394" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -238,7 +238,7 @@
         <!--Discover-->
         <scene sceneID="DVt-3n-dgx">
             <objects>
-                <viewController title="Discover" id="dj1-3T-F5A" customClass="DiscoverViewController" customModule="StoryboardPratices" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiscoverViewController" title="Discover" id="dj1-3T-F5A" customClass="DiscoverViewController" customModule="StoryboardPratices" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VVE-vB-I02">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,7 +354,7 @@
                                             <segue destination="dj1-3T-F5A" kind="show" identifier="discover" id="Wbo-Nd-oLu"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y7-xD-Yfm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y7-xD-Yfm">
                                         <rect key="frame" x="0.0" y="201" width="394" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -387,7 +387,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GaM-wE-9j0"/>
+        <segue reference="Wbo-Nd-oLu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Rectangle01" width="187.5" height="353.5"/>

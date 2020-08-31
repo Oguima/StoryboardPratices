@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -39,12 +40,36 @@ class LoginViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
+    func transitionToHome(){
+        //Change root view controller... (DiscoverViewController)
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? DiscoverViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
     
     @IBAction func nextTaped(_ sender: UIButton) {
         let error = validateFields()
         
         if error != nil {
             showError(error!)
+        }
+        
+        let email = txtEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let pwd = txtPwd.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().signIn(withEmail: email, link: pwd) { (result, error) in
+            
+            if error != nil {
+                //Couldn´t sign in
+                self.showError("Não foi possível fazer o login: \(error!.localizedDescription)")
+            }
+            else
+            {
+                //Ir para home...
+                self.transitionToHome()
+            }
         }
 
     }
