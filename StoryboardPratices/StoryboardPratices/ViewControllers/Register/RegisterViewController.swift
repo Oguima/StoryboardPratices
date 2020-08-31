@@ -27,6 +27,10 @@ class RegisterViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         errorLabel.alpha = 0
+        
+        navigationController?.isNavigationBarHidden = false
+        
+        
     }
     
     //MARK: Validate Fields: devolve nil caso campos estajam ok, e uma mensagem no caso de erro.

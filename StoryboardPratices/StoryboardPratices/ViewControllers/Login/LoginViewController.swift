@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         errorLabel.alpha = 0
+        navigationController?.isNavigationBarHidden = false
     }
     
     //MARK: Validate Fields: devolve nil caso campos estajam ok, e uma mensagem no caso de erro.
@@ -59,7 +60,7 @@ class LoginViewController: UIViewController {
         let email = txtEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let pwd = txtPwd.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        Auth.auth().signIn(withEmail: email, link: pwd) { (result, error) in
+        Auth.auth().signIn(withEmail: email, password: pwd) { (result, error) in
             
             if error != nil {
                 //Couldn´t sign in

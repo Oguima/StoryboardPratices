@@ -15,6 +15,11 @@ class LoggedOutViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
 
     @IBAction func returned(_ seg: UIStoryboardSegue)

@@ -37,6 +37,9 @@
                                                 <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="chg-Wd-wk1" kind="show" identifier="login" id="IIo-ck-4rV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja5-BZ-M5p" customClass="DesignableButton" customModule="StoryboardPratices" customModuleProvider="target">
                                         <rect key="frame" x="202" y="15" width="192" height="50"/>
@@ -69,7 +72,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="VMH-Xe-iTM">
-                                <rect key="frame" x="155.66666666666666" y="354.33333333333331" width="102.99999999999997" height="27.333333333333314"/>
+                                <rect key="frame" x="155.66666666666666" y="354.33333333333331" width="102.99999999999997" height="27.666666666666686"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -88,9 +91,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="6jZ-SD-fFq"/>
-                    <connections>
-                        <segue destination="chg-Wd-wk1" kind="show" identifier="login" id="xd5-Dc-uNc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,7 +199,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="nextTaped:" destination="H4Q-Cd-jou" eventType="touchUpInside" id="zTr-cZ-Mhd"/>
-                                            <segue destination="dj1-3T-F5A" kind="show" identifier="discover" id="GaM-wE-9j0"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7X-Xt-v9E">
@@ -351,7 +350,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="nextTaped:" destination="chg-Wd-wk1" eventType="touchUpInside" id="fC5-Re-ZCc"/>
-                                            <segue destination="dj1-3T-F5A" kind="show" identifier="discover" id="Wbo-Nd-oLu"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y7-xD-Yfm">
@@ -386,9 +384,6 @@
             <point key="canvasLocation" x="1783" y="-353"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Wbo-Nd-oLu"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Rectangle01" width="187.5" height="353.5"/>
         <image name="logoPhoto" width="103" height="27.5"/>
